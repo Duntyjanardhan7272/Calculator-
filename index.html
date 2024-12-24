@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Calculator Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculator Application</h1>
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('advanced')">Advanced Calculator</button>
+            <button class="tab-button" onclick="showTab('scientific')">Scientific Calculator</button>
+            <button class="tab-button" onclick="showTab('age')">Age Calculator</button>
+        </div>
+
+        <div id="advanced" class="tab-content active">
+            <h2>Advanced Calculator</h2>
+            <div class="calculator">
+                <input type="text" id="advanced-input" placeholder="0" readonly />
+                <div class="buttons">
+                    <button onclick="appendToInput('7')">7</button>
+                    <button onclick="appendToInput('8')">8</button>
+                    <button onclick="appendToInput('9')">9</button>
+                    <button onclick="appendToInput('/')">/</button>
+
+                    <button onclick="appendToInput('4')">4</button>
+                    <button onclick="appendToInput('5')">5</button>
+                    <button onclick="appendToInput('6')">6</button>
+                    <button onclick="appendToInput('*')">*</button>
+
+                    <button onclick="appendToInput('1')">1</button>
+                    <button onclick="appendToInput('2')">2</button>
+                    <button onclick="appendToInput('3')">3</button>
+                    <button onclick="appendToInput('-')">-</button>
+
+                    <button onclick="appendToInput('0')">0</button>
+                    <button onclick="calculateAdvanced()">=</button>
+                    <button onclick="clearInput()">C</button>
+                    <button onclick="appendToInput('+')">+</button>
+                    <button onclick="backspaceInput()">←</button>
+                </div>
+            </div>
+            <div id="advanced-result"></div>
+        </div>
+
+        <div id="scientific" class="tab-content">
+            <h2>Scientific Calculator</h2>
+            <div class="calculator">
+                <input type="text" id="scientific-input" placeholder="Enter expression" />
+                <div class="buttons">
+                    <button onclick="appendScientificInput('7')">7</button>
+                    <button onclick="appendScientificInput('8')">8</button>
+                    <button onclick="appendScientificInput('9')">9</button>
+                    <button onclick="appendScientificInput('/')">/</button>
+
+                    <button onclick="appendScientificInput('4')">4</button>
+                    <button onclick="appendScientificInput('5')">5</button>
+                    <button onclick="appendScientificInput('6')">6</button>
+                    <button onclick="appendScientificInput('*')">*</button>
+
+                    <button onclick="appendScientificInput('1')">1</button>
+                    <button onclick="appendScientificInput('2')">2</button>
+                    <button onclick="appendScientificInput('3')">3</button>
+                    <button onclick="appendScientificInput('-')">-</button>
+
+                    <button onclick="appendScientificInput('0')">0</button>
+                    <button onclick="calculateScientific()">=</button>
+                    <button onclick="clearScientificInput()">C</button>
+                    <button onclick="appendScientificInput('+')">+</button>
+
+                    <button onclick="appendScientificInput('Math.sqrt(')">√</button>
+                    <button onclick="appendScientificInput('Math.pow(')">x²</button>
+                    <button onclick="appendScientificInput('Math.sin(')">sin</button>
+                    <button onclick="appendScientificInput('Math.cos(')">cos</button>
+
+                    <button onclick="appendScientificInput('Math.tan(')">tan</button>
+                    <button onclick="appendScientificInput('Math.PI')">π</button>
+                    <button onclick="appendScientificInput('Math.log(')">log</button>
+                    <button onclick="appendScientificInput('Math.exp(')">exp</button>
+                    <button onclick="appendToInput('(')">(</button>
+                    <button onclick="appendToInput(')')">)</button>
+                    <button onclick="backspaceScientificInput()">←</button>
+                </div>
+            </div>
+            <div id="scientific-result"></div>
+        </div>
+
+        <div id="age" class="tab-content">
+            <h2>Age Calculator</h2>
+            <input type="date" id="birthdate" />
+            <button onclick="calculateAge()">Calculate Age</button>
+            <div id="age-result"></div>
+        </div>
+
+        <h2>Calculation History</h2>
+        <div id="history" class="history"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
