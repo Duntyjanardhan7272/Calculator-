@@ -38,4 +38,4 @@ This repository contains a professional calculator application designed for dive
 ### Running the Application
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/calculator-app.git
+   git clone https://github.com/Duntyjanardhan7272/calculator-app.git
